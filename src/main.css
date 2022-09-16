@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.green-mode {
+    background-image: linear-gradient(to right, #03658C, #04D9D9) !important;
+}
+
+.pink-mode {
+    background-image: linear-gradient(to right, #F22259, #FF6F62) !important;
+}
+
+.color-text-pink {
+    color: #F22259;
+}
+
+.color-text-green {
+    color: #03658C;
+}

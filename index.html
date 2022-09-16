@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./src/style.css">
+    <title>Calculadora</title>
+</head>
+
+<body class="bg-cinza-claro dark:bg-azul-escuro transition-all duration-1000">
+    <header class="pt-12 pb-12 flex justify-center gap-10">
+        <h1 class="font-montserrat font-normal text-4xl text-center text-cinza-escuro dark:text-white">Calculadora</h1>
+        <label for="check" class="bg-white cursor-pointer relative w-20 h-10 rounded-full drop-shadow-md">
+            <input type="checkbox" id="check" class="sr-only peer">
+            <span
+                class="w-2/5 h-4/5 bg-laranja absolute rounded-full left-1 top-1 peer-checked:bg-cinza peer-checked:left-11 transition-all duration-500"></span>
+        </label>
+    </header>
+
+    <main class="drop-shadow-lg mx-auto max-w-sm">
+        <div id="bg-degrade" class="w-full h-48 pt-16 pr-8 bg-laranja dark:bg-cinza transition-all duration-1000">
+            <div id="resultado" class="flex justify-end align-bottom pb-4 font-inter font-bold text-white text-6xl">0
+            </div>
+            <div id="operacao" class="flex justify-end font-inter font-medium text-white text-xl opacity-80"></div>
+        </div>
+        <div id="calculadora">
+            <div id="botoes" class="grid grid-cols-4">
+                <button data-action="limpar-tudo"
+                    class="font-inter font-normal text-xl text-center text-rosa dark:text-cinza transition-all duration-1000 px-2 py-6 bg-cinza-claro dark:bg-cinza-medio">AC</button>
+                <button data-action="/"
+                    class="font-inter font-normal text-2xl text-center text-rosa dark:text-cinza transition-all duration-1000 px-2 py-6 bg-cinza-claro dark:bg-cinza-medio">÷</button>
+                <button data-action="*"
+                    class="font-inter font-normal text-xl text-center text-rosa dark:text-cinza transition-all duration-1000 px-2 py-6 bg-cinza-claro dark:bg-cinza-medio">x</button>
+                <button data-action="apagar"
+                    class="font-inter font-normal text-2xl text-center text-rosa dark:text-cinza transition-all duration-1000 px-2 py-6 bg-cinza-claro dark:bg-cinza-medio">⌫</button>
+
+                <button data-numero="7"
+                    class="numero font-inter font-normal text-xl text-center text-cinza-escuro px-4 py-6 bg-white">7</button>
+                <button data-numero="8"
+                    class="numero font-inter font-normal text-xl text-center text-cinza-escuro px-4 py-6 bg-white">8</button>
+                <button data-numero="9"
+                    class="numero font-inter font-normal text-xl text-center text-cinza-escuro px-4 py-6 bg-white">9</button>
+                <button data-action="-"
+                    class="font-inter font-normal text-2xl text-center text-rosa dark:text-cinza transition-all duration-1000 px-2 py-6 bg-cinza-claro dark:bg-cinza-medio">−</button>
+
+                <button data-numero="4"
+                    class="font-inter font-normal text-xl text-center text-cinza-escuro px-4 py-6 bg-white">4</button>
+                <button data-numero="5"
+                    class="font-inter font-normal text-xl text-center text-cinza-escuro px-4 py-6 bg-white">5</button>
+                <button data-numero="6"
+                    class="font-inter font-normal text-xl text-center text-cinza-escuro px-4 py-6 bg-white">6</button>
+                <button data-action="+"
+                    class="font-inter font-normal text-2xl text-center text-rosa dark:text-cinza transition-all duration-1000 px-2 py-6 bg-cinza-claro dark:bg-cinza-medio">+</button>
+
+                <button data-numero="1"
+                    class="font-inter font-normal text-xl text-center text-cinza-escuro px-4 py-6 bg-white">1</button>
+                <button data-numero="2"
+                    class="font-inter font-normal text-xl text-center text-cinza-escuro px-4 py-6 bg-white">2</button>
+                <button data-numero="3"
+                    class="font-inter font-normal text-xl text-center text-cinza-escuro px-4 py-6 bg-white">3</button>
+                <button data-action="calcular"
+                    class="font-inter font-normal text-2xl text-center text-white px-2 py-6 bg-laranja dark:bg-cinza transition-all duration-1000 row-span-4">=</button>
+
+                <button data-numero="0"
+                    class="font-inter font-normal text-xl text-center text-cinza-escuro px-4 py-6 bg-white col-span-2">0</button>
+                <button data-action="decimal"
+                    class="font-inter font-normal text-xl text-center text-cinza-escuro px-4 py-6 bg-white">.</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
